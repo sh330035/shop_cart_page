@@ -1,0 +1,1228 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+  // color: #000000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn,
+button,
+button:focus,
+input:focus,
+textarea:focus,
+select,
+select:focus,
+a:focus {
+  outline: 0px !important;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+button[disabled] {
+  pointer-events: none;
+}
+
+input {
+  padding: 0;
+}
+
+input:required {
+  box-shadow: none;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+/* 載入字型 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional');
+// theme
+$themes: (
+  light: (
+    body-bg: #ffffff,
+    body-color: #000000,
+    body-price: #000000,
+    icon: #000000,
+    border-gray: #f0f0f5,
+    stepper-gray: #afb1bd,
+    stepper-circle-border: #afb1bd,
+    stepper-circle: #000000,
+    stepper-number: #ffffff,
+    stepper-line: #f0f0f5,
+    label-text: #808080,
+    input-border: #000000,
+    delivery-border: #f0f0f5,
+    delivery-border-hover: #000000,
+    delivery-description: #000000,
+    delivery-background: #ffffff,
+    delivery-radio: #000000,
+    cart-bg: #ffffff,
+    cart-text: #000000,
+    cart-border: #f0f0f5,
+    cart-caculate: #000000,
+    cart-button: #f0f0f5,
+    button-color: #ffffff,
+    button-pink: #f67599,
+    footer-bg: #f6f7f8,
+    footer-title: #2a2a2a,
+    footer-text: #808080,
+    footer-icon: #808080,
+    logo-url: url('../Logo.svg'),
+    darkmode-toggle-url: url('../moon.png'),
+    cart-url: url('../shopping-cart.png'),
+    search-url: url('../loupe.png')
+  ),
+  dark: (
+    body-bg: #000000,
+    body-color: #ffffff,
+    body-price: #000000,
+    icon: #000000,
+    border-gray: rgba(255, 255, 255, 0.4),
+    stepper-gray: #afb1bd,
+    stepper-circle-border: #383838,
+    stepper-circle: #383838,
+    stepper-number: #ffffff,
+    stepper-line: #383838,
+    label-text: rgba(255, 255, 255, 0.4),
+    input-border: #5e5e5e,
+    delivery-border: #5e5e5e,
+    delivery-border-hover: #ffffff,
+    delivery-description: rgba(255, 255, 255, 0.4),
+    delivery-background: rgba(255, 255, 255, 0.4),
+    delivery-radio: #ffffff,
+    cart-bg: #383838,
+    cart-text: #ffffff,
+    cart-border: rgba(255, 255, 255, 0.4),
+    cart-caculate: #000000,
+    cart-button: #808080,
+    button-color: #ffffff,
+    button-pink: #f67599,
+    footer-bg: #333333,
+    footer-title: #ffffff,
+    footer-text: rgba(255, 255, 255, 0.6),
+    footer-icon: #808080,
+    logo-url: url('../Logo-dark.svg'),
+    darkmode-toggle-url: url('../sun.png'),
+    cart-url: url('../shopping-cart-dark.png'),
+    search-url: url('../loupe-dark.png')
+  )
+);
+
+// color setting
+$body-bg: #ffffff;
+$body-color: #000000;
+$body-price: #000000;
+$icon: #000000;
+$border-gray: #f0f0f5;
+$stepper-gray: #afb1bd;
+$stepper-circle-border: #afb1bd;
+$stepper-circle: #000000;
+$stepper-number: #ffffff;
+$stepper-line: #f0f0f5;
+$label-text: #808080;
+$input-border: #000000;
+$delivery-border: #f0f0f5;
+$delivery-border-hover: #000000;
+$delivery-description: #000000;
+$delivery-background: #ffffff;
+$delivery-radio: #000000;
+$cart-bg: #ffffff;
+$cart-text: #000000;
+$cart-border: #f0f0f5;
+$cart-caculate: #000000;
+$cart-button: #f0f0f5;
+$button-color: #ffffff;
+$button-pink: #f67599;
+$footer-bg: #f6f7f8;
+$footer-title: #2a2a2a;
+$footer-text: #808080;
+$footer-icon: #808080;
+
+$logo-url: url('../Logo.svg');
+$darkmode-toggle-url: url('https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg');
+$cart-url: url('../shopping-cart.png');
+$search-url: url('../loupe.png');
+
+// dark
+// $body-bg: #000000;
+// $body-color: #ffffff;
+// $body-price: #000000;
+// $icon: #000000;
+// $border-gray: rgba(255,255,255,0.4);
+// $stepper-gray: #AFB1BD;
+// $stepper-circle-border: #383838;
+// $stepper-circle: #383838;
+// $stepper-number: #ffffff;
+// $stepper-line: #383838;
+// $label-text: rgba(255,255,255,0.4);
+// $input-border: #5E5E5E;
+// $delivery-border: #5E5E5E;
+// $delivery-border-hover: #ffffff;
+// $delivery-description: rgba(255,255,255,0.4);
+// $delivery-background:rgba(255,255,255,0.4);
+// $delivery-radio:#ffffff;
+// $cart-bg: #383838;
+// $cart-text: #ffffff;
+// $cart-border: rgba(255,255,255,0.4);
+// $cart-caculate: #000000;
+// $cart-button: #808080;
+// $button-color: #ffffff;
+// $button-pink: #F67599;
+// $footer-bg:#333333;
+// $footer-title: #ffffff;
+// $footer-text: rgba(255,255,255,0.6);
+// $footer-icon: #808080;
+
+// $logo-url: url('../Logo-dark.svg');
+// $darkmode-toggle-url: url('../sun.png');
+// $cart-url: url('../shopping-cart-dark.png');
+// $search-url: url('../loupe-dark.png');
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+// Function
+@function themed($key) {
+  // 依據傳入的 key 值，由全域變數 $theme-map 取得設定值並回傳
+  @return map-get($theme-map, $key);
+}
+
+%input-style {
+  @include themify($themes) {
+    border: 1px solid themed('input-border');
+    background-color: themed('body-bg');
+    color: themed('body-color');
+  }
+  border-radius: 5px;
+  font-style: 16px;
+  padding: 0.5rem;
+  margin-top: 2px;
+  height: 40px;
+}
+
+.scrollbar {
+  padding-left: 6px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    @include themify($themes) {
+      background-color: themed('border-gray');
+    }
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  @include themify($themes) {
+    background: themed('body-bg');
+    color: themed('body-color');
+  }
+  height: 100%;
+  font-family: 'Noto Sans TC';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+$wh: (
+  width: w,
+  height: h
+);
+
+@each $prop, $abbrev in $wh {
+  @each $num, $val in $sizes {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: #{$val};
+    }
+  }
+}
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25
+  ),
+  2: (
+    $spacer * 0.5
+  ),
+  3: (
+    $spacer * 0.75
+  ),
+  4: $spacer,
+  5: (
+    $spacer * 1.25
+  ),
+  6: (
+    $spacer * 1.5
+  ),
+  7: (
+    $spacer * 1.75
+  ),
+  8: (
+    $spacer * 2
+  ),
+  16: (
+    $spacer * 4
+  )
+);
+
+$mp: (
+  margin: m,
+  padding: p
+);
+
+@each $prop, $abbrev in $mp {
+  @each $num, $val in $spacers {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: #{$val};
+    }
+    .#{$abbrev}-t-#{$num} {
+      #{$prop}-top: #{$val};
+    }
+    .#{$abbrev}-b-#{$num} {
+      #{$prop}-bottom: #{$val};
+    }
+    .#{$abbrev}-l-#{$num} {
+      #{$prop}-left: #{$val};
+    }
+    .#{$abbrev}-r-#{$num} {
+      #{$prop}-right: #{$val};
+    }
+    .#{$abbrev}-x-#{$num} {
+      #{$prop}-left: #{$val};
+      #{$prop}-right: #{$val};
+    }
+    .#{$abbrev}-y-#{$num} {
+      #{$prop}-top: #{$val};
+      #{$prop}-bottom: #{$val};
+    }
+  }
+}
+
+// stepper number
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .circle-container::after {
+      content: '#{$i}';
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// write here
+main {
+  width: 100%;
+  padding: 0 15px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 17px;
+  justify-content: center;
+  position: relative;
+  .brand {
+    height: 50px;
+    width: 175px;
+    @include themify($themes) {
+      background-image: themed('logo-url');
+    }
+    background-size: 100% 100%;
+    z-index: 5;
+  }
+  .nav {
+    width: 100%;
+    position: absolute;
+    top: 67px;
+    @include themify($themes) {
+      background-color: themed('body-bg');
+    }
+    z-index: 1;
+    /* 陰影 */
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        width: 80%;
+        text-align: center;
+        padding: 20px 0 20px 0;
+        @include themify($themes) {
+          border-bottom: 1px solid themed('border-gray');
+        }
+        a {
+          @include themify($themes) {
+            color: themed('body-color');
+          }
+        }
+      }
+    }
+  }
+  .hamburger {
+    position: absolute;
+    padding: 2px;
+    width: 28px;
+    height: 25px;
+    left: 1.75rem;
+    top: 39px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .ham {
+    width: 18px;
+    height: 2px;
+    @include themify($themes) {
+      background-color: themed('body-color');
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+
+      height: 2px;
+      @include themify($themes) {
+        background-color: themed('body-color');
+      }
+    }
+
+    &::before {
+      width: 12px;
+      bottom: 4px;
+    }
+    &::after {
+      width: 24px;
+      top: 4px;
+    }
+  }
+}
+
+.icon-container {
+  padding-top: 20px;
+  height: 60px;
+  width: 100%;
+  justify-content: center;
+  .icon {
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    &-search {
+      @include themify($themes) {
+        background: themed('search-url');
+        background-size: 100% 100%;
+      }
+    }
+    &-cart {
+      @include themify($themes) {
+        background: themed('cart-url');
+        background-size: 100% 100%;
+      }
+    }
+    &-darkmode {
+      @include themify($themes) {
+        background: themed('darkmode-toggle-url');
+        background-size: 100% 100%;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+.page-title {
+  width: 100%;
+  height: 78px;
+  align-items: center;
+  p {
+    @include themify($themes) {
+      color: themed('body-color');
+    }
+    font-size: 24px;
+    font-weight: 900;
+  }
+}
+
+.stepper-panel {
+  width: 100%;
+  padding-bottom: 27px;
+
+  .stepper-container {
+    display: flex;
+    justify-content: center;
+
+    :nth-child(2) {
+      .circle-container {
+        margin: 0 auto;
+      }
+      .connect-line {
+        transform: translate(-25%, 0);
+      }
+    }
+    :nth-child(3) {
+      .circle-container {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
+  .step {
+    position: relative;
+    @include getStepNums(3);
+    text-align: center;
+    line-height: 27px;
+    @include themify($themes) {
+      color: themed('stepper-gray');
+    }
+    width: 33%;
+    .circle-container {
+      @include themify($themes) {
+        border: 1px solid themed('stepper-circle-border');
+      }
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+    .label-container {
+      display: none;
+    }
+    .connect-line {
+      position: absolute;
+      display: block;
+      top: 16px;
+      left: 100%;
+      height: 1px;
+      width: 80%;
+      transform: translate(-75%, 0);
+      @include themify($themes) {
+        background-color: themed('stepper-line');
+      }
+    }
+
+    &.active {
+      @include themify($themes) {
+        color: themed('stepper-number');
+      }
+      .circle-container {
+        @include themify($themes) {
+          background-color: themed('stepper-circle');
+        }
+      }
+      .connect-line {
+        @include themify($themes) {
+          background-color: themed('body-color');
+        }
+      }
+    }
+
+    &.checked .circle-container::after {
+      content: '\2714';
+    }
+  }
+}
+
+.form-panel {
+  .part {
+    margin-bottom: 24px;
+    .part-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      @include themify($themes) {
+        color: themed('body-color');
+      }
+    }
+    .form-container-One {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .form-container-two {
+      .delivery-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include themify($themes) {
+          border: 1px solid themed('delivery-border');
+        }
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 24px;
+        &:hover {
+          @include themify($themes) {
+            border: 1px solid themed('delivery-border-hover');
+          }
+          transition: all 0.5s;
+        }
+        .delivery-description {
+          width: 60%;
+          > label {
+            @include themify($themes) {
+              color: themed('body-color');
+            }
+            font-size: 14px;
+            font-weight: 700;
+          }
+          > p {
+            @include themify($themes) {
+              color: themed('delivery-description');
+            }
+            font-size: 12px;
+          }
+        }
+        .delivery-price {
+          @include themify($themes) {
+            color: themed('body-color');
+          }
+        }
+      }
+    }
+    .form-container-three {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+form {
+  .form-row {
+    margin-bottom: 24px;
+    width: 100%;
+    &.name,
+    &.title,
+    &.effective-date,
+    &.card-code {
+      width: 45%;
+    }
+    > label {
+      font-size: 12px;
+      font-weight: 700;
+      @include themify($themes) {
+        color: themed('label-text');
+      }
+    }
+    .bank-account-input {
+      width: 100%;
+      @include themify($themes) {
+        border: 1px solid themed('input-border');
+      }
+      display: inline-block;
+      padding: 0.5rem;
+      margin-top: 3px;
+      border-radius: 5px;
+      input {
+        width: 20%;
+        border: 0;
+        height: 14px;
+        padding: unset;
+        background-color: unset;
+      }
+    }
+
+    .effective-date-input {
+      width: 100%;
+      @include themify($themes) {
+        border: 1px solid themed('input-border');
+      }
+      display: inline-block;
+      padding: 0.5rem;
+      margin-top: 3px;
+      border-radius: 5px;
+      z-index: 1;
+
+      input {
+        width: 35%;
+        border: 0;
+        padding: 0;
+        height: 14px;
+        background-color: unset;
+      }
+    }
+  }
+  input {
+    @extend %input-style;
+    width: 100%;
+    &[type='radio'] {
+      -webkit-appearance: none;
+      border-radius: 50%;
+      width: unset;
+      height: unset;
+      cursor: pointer;
+      @include themify($themes) {
+        background-color: themed('delivery-background');
+      }
+      &:checked {
+        @include themify($themes) {
+          box-shadow: inset 0 0 0 5px themed('delivery-radio');
+        }
+      }
+    }
+  }
+  select {
+    @extend %input-style;
+    width: 100%;
+  }
+}
+
+.cart {
+  padding: 16px 10px 0px 16px;
+  @include themify($themes) {
+    background-color: themed('cart-bg');
+    border: 1px solid themed('cart-border');
+    color: themed('cart-text');
+  }
+  border-radius: 10px;
+  .cart-title {
+    display: none;
+  }
+
+  .item-card {
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    .item-image {
+      width: 100px;
+      height: 100px;
+
+      img {
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+      }
+    }
+
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .item-count {
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
+        .add,
+        .minus {
+          @include themify($themes) {
+            color: themed('cart-caculate');
+            background-color: themed('cart-button');
+          }
+          width: 27px;
+          height: 27px;
+          font-size: 25px;
+
+          border-radius: 50%;
+          text-align: center;
+          line-height: 22px;
+          cursor: pointer;
+        }
+      }
+
+      .item-unit-price {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .cart-delivery-fee,
+  .cart-total-cost {
+    @include themify($themes) {
+      border-top: 1px solid themed('cart-border');
+    }
+    margin-top: 5px;
+    padding: 20px 0;
+    .content {
+      font-size: 14px;
+    }
+    .subtotal {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
+.button-panel {
+  @include themify($themes) {
+    border-top: 1px solid themed('border-gray');
+  }
+  margin-top: 30px;
+  .btn {
+    margin: 20px 0;
+    height: 46px;
+    border-radius: 8px;
+    span {
+      font-size: 18px;
+    }
+    &-previous {
+      @include themify($themes) {
+        color: themed('body-color');
+      }
+    }
+    &-next,
+    &-submit {
+      @include themify($themes) {
+        background-color: themed('button-pink');
+        color: themed('button-color');
+      }
+    }
+  }
+}
+
+// button change
+.button-page- {
+  &1 {
+    .btn-next {
+      width: 100%;
+    }
+    .btn-previous,
+    .btn-submit {
+      display: none;
+    }
+  }
+
+  &2 {
+    .btn-previous,
+    .btn-next {
+      width: 45%;
+    }
+    .btn-submit {
+      display: none;
+    }
+  }
+
+  &3 {
+    .btn-previous,
+    .btn-submit {
+      width: 45%;
+    }
+    .btn-next {
+      display: none;
+    }
+  }
+}
+
+footer {
+  display: none;
+}
+
+// 大螢幕尺寸 (>375 px)
+@media (min-width: 480px) {
+  header {
+    min-height: 64px;
+    .brand {
+      position: absolute;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav {
+      background-color: unset;
+      position: relative;
+      top: unset;
+      display: grid;
+      grid-template-columns: 1fr repeat(17, minmax(23px, 63px)) 1fr;
+      box-shadow: unset;
+      ul {
+        flex-direction: row;
+        justify-content: space-between;
+        grid-column: 2/8;
+        li {
+          width: unset;
+          text-align: left;
+          @include themify($themes) {
+            border-bottom: none;
+          }
+          padding: 0px;
+        }
+      }
+      .icon-container {
+        grid-column: 16/19;
+        justify-content: space-between;
+      }
+    }
+  }
+  main {
+    max-width: 1100px;
+    margin-bottom: 50px;
+  }
+  .page-title {
+    margin: 20px 0;
+    p {
+      font-size: 32px;
+    }
+  }
+  .form-content {
+    display: grid;
+    grid-template-columns: 8.5fr 2fr 7fr;
+    grid-template-rows: 60px 350px 70px;
+    gap: 0;
+    grid-template-areas:
+      'stepper-panel . cart'
+      'part . cart'
+      'button-panel . cart';
+    .stepper-panel {
+      grid-area: stepper-panel;
+    }
+    .part {
+      grid-area: part;
+    }
+    .cart {
+      grid-area: cart;
+    }
+    .button-panel {
+      grid-area: button-panel;
+    }
+  }
+
+  .stepper-panel {
+    .stepper-container {
+      .step {
+        line-height: 20px;
+        display: flex;
+
+        align-items: center;
+        .circle-container {
+          height: 24px;
+          width: 24px;
+        }
+        .label-container {
+          display: unset;
+          margin-left: 10px;
+          line-height: 10px;
+          @include themify($themes) {
+            color: themed('stepper-gray');
+          }
+        }
+        .connect-line {
+          top: 12px;
+          width: 60px;
+        }
+        &.active .label-container {
+          @include themify($themes) {
+            color: themed('body-color');
+          }
+        }
+      }
+      :nth-child(2) {
+        .circle-container {
+          margin: 0 0 0 20%;
+        }
+      }
+    }
+  }
+  .form-panel {
+    .part {
+      .form-container-One {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(1fr, 4rem));
+        grid-template-rows: repeat(3, 4rem);
+        gap: 2rem;
+        grid-template-areas:
+          'title title name name name name'
+          'phone phone phone email email email'
+          'city city address address address address';
+
+        .title {
+          width: 100%;
+          grid-area: title;
+        }
+        .name {
+          width: 100%;
+          grid-area: name;
+        }
+        .phone {
+          grid-area: phone;
+        }
+        .email {
+          grid-area: email;
+        }
+        .city {
+          grid-area: city;
+        }
+        .address {
+          grid-area: address;
+        }
+      }
+      .form-container-three {
+        .card-own,
+        .card-number {
+          width: 70%;
+          min-width: 200px;
+        }
+      }
+    }
+  }
+  .button-panel {
+    margin-top: 10px;
+  }
+  .button-page- {
+    &1 {
+      justify-content: end;
+      .btn-next {
+        min-width: 100px;
+        width: 30%;
+      }
+    }
+
+    &2 {
+      .btn-previous,
+      .btn-next {
+        min-width: 100px;
+        width: 30%;
+      }
+    }
+
+    &3 {
+      .btn-previous,
+      .btn-submit {
+        min-width: 100px;
+        width: 30%;
+      }
+    }
+  }
+  .cart {
+    .cart-title-container {
+      padding-bottom: 16px;
+      .cart-title {
+        display: unset;
+        font-size: 18px;
+      }
+    }
+    // 做卷軸
+    .cart-items {
+      padding-top: 20px;
+      min-height: 280px;
+      max-height: 280px;
+      overflow-y: scroll;
+
+      .item-card {
+        justify-content: unset;
+        .item-content {
+          margin-left: 20px;
+          display: grid;
+          grid-template-columns: 175px 0.7fr 0.7fr;
+          grid-template-rows: 30% 50%;
+          gap: 10px 0px;
+          grid-template-areas:
+            'item-title . item-unit-price'
+            'item-count . .';
+          align-items: center;
+        }
+        .item-title {
+          grid-area: item-title;
+        }
+        .item-count {
+          grid-area: item-count;
+        }
+        .item-unit-price {
+          grid-area: item-unit-price;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: unset;
+    position: relative;
+    width: 100%;
+    min-height: 15vw;
+    padding: 1rem;
+    @include themify($themes) {
+      background-color: themed('footer-bg');
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 50%;
+      top: 50px;
+      transform: translateX(-50%);
+      width: 70%;
+      margin-top: 0;
+      .footer-AShop-Logo {
+        margin-top: 60px;
+        width: 175px;
+        height: 31px;
+        @include themify($themes) {
+          background-image: themed('logo-url');
+        }
+        background-size: 100%;
+      }
+      .footer-content {
+        h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        a {
+          margin-left: 5px;
+          @include themify($themes) {
+            color: themed('footer-text');
+          }
+        }
+      }
+    }
+  }
+}
