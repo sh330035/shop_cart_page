@@ -919,11 +919,11 @@ header .brand {
 }
 
 .theme-light header .brand {
-  background-image: url("../Logo.svg");
+  background-image: url("../icon/Logo.svg");
 }
 
 .theme-dark header .brand {
-  background-image: url("../Logo-dark.svg");
+  background-image: url("../icon/Logo-dark.svg");
 }
 
 header .nav {
@@ -1050,22 +1050,22 @@ header .ham::after {
 }
 
 .theme-light .icon-container .icon-search {
-  background: url("../loupe.png");
+  background: url("../icon/loupe.png");
   background-size: 100% 100%;
 }
 
 .theme-dark .icon-container .icon-search {
-  background: url("../loupe-dark.png");
+  background: url("../icon/loupe-dark.png");
   background-size: 100% 100%;
 }
 
 .theme-light .icon-container .icon-cart {
-  background: url("../shopping-cart.png");
+  background: url("../icon/shopping-cart.png");
   background-size: 100% 100%;
 }
 
 .theme-dark .icon-container .icon-cart {
-  background: url("../shopping-cart-dark.png");
+  background: url("../icon/shopping-cart-dark.png");
   background-size: 100% 100%;
 }
 
@@ -1074,12 +1074,12 @@ header .ham::after {
 }
 
 .theme-light .icon-container .icon-darkmode {
-  background: url("../moon.png");
+  background: url("../icon/moon.png");
   background-size: 100% 100%;
 }
 
 .theme-dark .icon-container .icon-darkmode {
-  background: url("../sun.png");
+  background: url("../icon/sun.png");
   background-size: 100% 100%;
 }
 
@@ -1928,10 +1928,10 @@ footer {
     background-size: 100%;
   }
   .theme-light footer .footer-container .footer-AShop-Logo {
-    background-image: url("../Logo.svg");
+    background-image: url("../icon/Logo.svg");
   }
   .theme-dark footer .footer-container .footer-AShop-Logo {
-    background-image: url("../Logo-dark.svg");
+    background-image: url("../icon/Logo-dark.svg");
   }
   footer .footer-container .footer-content h3 {
     font-size: 24px;

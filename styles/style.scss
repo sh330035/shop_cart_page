@@ -103,10 +103,10 @@ $themes: (
     footer-title: #2a2a2a,
     footer-text: #808080,
     footer-icon: #808080,
-    logo-url: url('../Logo.svg'),
-    darkmode-toggle-url: url('../moon.png'),
-    cart-url: url('../shopping-cart.png'),
-    search-url: url('../loupe.png')
+    logo-url: url('../icon/Logo.svg'),
+    darkmode-toggle-url: url('../icon/moon.png'),
+    cart-url: url('../icon/shopping-cart.png'),
+    search-url: url('../icon/loupe.png')
   ),
   dark: (
     body-bg: #000000,
@@ -137,10 +137,10 @@ $themes: (
     footer-title: #ffffff,
     footer-text: rgba(255, 255, 255, 0.6),
     footer-icon: #808080,
-    logo-url: url('../Logo-dark.svg'),
-    darkmode-toggle-url: url('../sun.png'),
-    cart-url: url('../shopping-cart-dark.png'),
-    search-url: url('../loupe-dark.png')
+    logo-url: url('../icon/Logo-dark.svg'),
+    darkmode-toggle-url: url('../icon/sun.png'),
+    cart-url: url('../icon/shopping-cart-dark.png'),
+    search-url: url('../icon/loupe-dark.png')
   )
 );
 
