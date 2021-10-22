@@ -1,0 +1,40 @@
+@import './themes';
+
+%input-style {
+  @include themify($themes) {
+    border: 1px solid themed('input-border');
+    background-color: themed('body-bg');
+    color: themed('body-color');
+  }
+  border-radius: 5px;
+  font-style: 16px;
+  padding: 0.5rem;
+  margin-top: 2px;
+  height: 40px;
+}
+
+// stepper number
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .circle-container::after {
+      content: '#{$i}';
+    }
+  }
+}
+
+.scrollbar {
+  padding-left: 6px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    @include themify($themes) {
+      background-color: themed('border-gray');
+    }
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

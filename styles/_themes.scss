@@ -1,0 +1,95 @@
+// theme
+$themes: (
+  light: (
+    body-bg: #ffffff,
+    body-color: #000000,
+    body-price: #000000,
+    icon: #000000,
+    border-gray: #f0f0f5,
+    stepper-gray: #afb1bd,
+    stepper-circle-border: #afb1bd,
+    stepper-circle: #000000,
+    stepper-number: #ffffff,
+    stepper-line: #f0f0f5,
+    label-text: #808080,
+    input-border: #000000,
+    delivery-border: #f0f0f5,
+    delivery-border-hover: #000000,
+    delivery-description: #000000,
+    delivery-background: #ffffff,
+    delivery-radio: #000000,
+    cart-bg: #ffffff,
+    cart-text: #000000,
+    cart-border: #f0f0f5,
+    cart-caculate: #000000,
+    cart-button: #f0f0f5,
+    button-color: #ffffff,
+    button-pink: #f67599,
+    footer-bg: #f6f7f8,
+    footer-title: #2a2a2a,
+    footer-text: #808080,
+    footer-icon: #808080,
+    logo-url: url('../icon/Logo.svg'),
+    darkmode-toggle-url: url('../icon/moon.png'),
+    cart-url: url('../icon/shopping-cart.png'),
+    search-url: url('../icon/loupe.png')
+  ),
+  dark: (
+    body-bg: #000000,
+    body-color: #ffffff,
+    body-price: #000000,
+    icon: #000000,
+    border-gray: rgba(255, 255, 255, 0.4),
+    stepper-gray: #afb1bd,
+    stepper-circle-border: #383838,
+    stepper-circle: #383838,
+    stepper-number: #ffffff,
+    stepper-line: #383838,
+    label-text: rgba(255, 255, 255, 0.4),
+    input-border: #5e5e5e,
+    delivery-border: #5e5e5e,
+    delivery-border-hover: #ffffff,
+    delivery-description: rgba(255, 255, 255, 0.4),
+    delivery-background: rgba(255, 255, 255, 0.4),
+    delivery-radio: #ffffff,
+    cart-bg: #383838,
+    cart-text: #ffffff,
+    cart-border: rgba(255, 255, 255, 0.4),
+    cart-caculate: #000000,
+    cart-button: #808080,
+    button-color: #ffffff,
+    button-pink: #f67599,
+    footer-bg: #333333,
+    footer-title: #ffffff,
+    footer-text: rgba(255, 255, 255, 0.6),
+    footer-icon: #808080,
+    logo-url: url('../icon/Logo-dark.svg'),
+    darkmode-toggle-url: url('../icon/sun.png'),
+    cart-url: url('../icon/shopping-cart-dark.png'),
+    search-url: url('../icon/loupe-dark.png')
+  )
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+// Function
+@function themed($key) {
+  // 依據傳入的 key 值，由全域變數 $theme-map 取得設定值並回傳
+  @return map-get($theme-map, $key);
+}
